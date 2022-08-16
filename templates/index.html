@@ -1,19 +1,14 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
 
-<html lang="en">
-  <head>
-    <meta name="viewport" content="initial-scale=1, width=devide-width" />
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <title>Fer's Bank</title>
-  </head>
-  <body>
-    <h1>
-      Welcome to Fer's Bank
-    </h1>
-    <form action="/account" method="get">
-        <input autocomplete="off" autofocus name="name" required placeholder="Name">
-        <input type="submit">
-    </form>
-  </body>
-</html>
+{% block body %}
+
+  <h1>
+    Welcome to Fer's Bank
+  </h1>
+  <form action="/account" method="get">
+      <input autocomplete="off" autofocus name="name" required placeholder="Name">
+      <input type="submit">
+  </form>
+
+{% endblock %}
+
