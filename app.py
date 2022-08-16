@@ -9,9 +9,9 @@ def index():
   return render_template("index.html")
 
 
-@app.route("/account.html", methods=["POST","GET"])
+@app.route("/create-account.html", methods=["POST","GET"])
 def account():
-    return render_template("account.html")
+    return render_template("create-account.html")
 
 #@app.route("/create-account", methods=["POST"])
 #def create_account():
