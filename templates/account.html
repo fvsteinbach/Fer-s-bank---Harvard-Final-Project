@@ -1,15 +1,10 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
 
-<html lang="en">
-  <head>
-    <meta name="viewport" content="initial-scale=1, width=devide-width" />
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <title>Fer's Bank - Account</title>
-  </head>
-  <body>
-    <h1>
-      Hello, {{ name }}
-    </h1>
-    Welcome to Fer's Bank
-  </body>
-</html>
+{%block body %}
+
+<h1>
+  Hello, {{ name }}
+</h1>
+Welcome to Fer's Bank
+
+{% endblock %}
