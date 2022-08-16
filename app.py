@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect
+import sqlite3
 
 app = Flask(__name__)
 
@@ -15,4 +16,4 @@ def account():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
