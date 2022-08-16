@@ -16,18 +16,23 @@ def add_account():
     return render_template("add-account.html")
 
 
-@app.route("/create-account.html")
+@app.route("/create-account.html", methods=["POST", "GET"])
 def create_account():
-    #Validade name
-    account_owner = request.form.get("fname" + " " + "lname")
-    if not account_owner:
+    #Validade first name
+    name = request.form.get("name")
+    if not name:
       return render_template("error.html", message="Missing name")
-
-    #Validate account_balance
-    account_balance = request.form.get("balance")
-    if not account_balance:
-       return render_template("error.html", message="Missing balance")
     
+    #Validate account_balance
+    balance = request.form.get("balance")
+    if not balance:
+      return render_template("error.html", message="Missing balance")
+    
+    #Rember the balance 
+    account_list[name] = balance
+
+    #Confirm account creation
+    return render_template("created.html")
 
 
 @app.route("/remove-account.html")

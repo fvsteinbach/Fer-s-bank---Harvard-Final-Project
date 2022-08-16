@@ -5,17 +5,10 @@
 <h2>
     Welcome to Fer's Bank  
   </h2>
-  <form>
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname"><br>
-    <label for="balance">Account balance:</label><br>
-    <input type="number" id="lname" name="lname"><br>
-    <br>
-    <input type="submit" value="Create">
-    <br>
-    <br>
+  <form action="/create-account.html" method="POST">
+    <input autocomplete="off" autofocus name="name" placeholder="name" type="text"> 
+    <input autocomplete="off" autofocus name="balance" placeholder="balance" type="text"> 
+    <input type="submit" value="Create"> 
   </form>
   
   <a href="/" ><button> Go home </button></a>
